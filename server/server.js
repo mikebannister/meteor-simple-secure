@@ -13,7 +13,7 @@ Meteor.publish('readOnlyData', function () {
 
 // Example end
 
-// Example start: Secure data by turning off magic data methods
+// Example start: Secure data by turning off all magic data methods
 
 SimpleSecure.noDataMagic();
 
