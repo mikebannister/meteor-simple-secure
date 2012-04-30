@@ -1,0 +1,39 @@
+<head>
+  <title>Meteor Simple Secure</title>
+</head>
+
+<body>
+  {{> simpleSecureDemo}}
+  {{> simpleSecureCode}}
+</body>
+
+<template name="simpleSecureDemo">
+  <h1>Meteor Simple Secure</h1>
+  <p><em>An app to demonstrate <strong>Simple Secure</strong> for Meteor</em> <a href="https://github.com/mikebannister/meteor-simple-secure">See the code on Github</a></p>
+
+  <h3>Demo</h3>
+
+  {{#if readOnlyData}}
+
+    <p><strong>Read only bits</strong></p>
+
+    {{#each readOnlyData}}
+        <span class="label label-warning">{{readOnlyBit}}</span>
+    {{/each}}
+
+    <p><input class="btn btn-primary" type="button" value="Delete Read Only Bits!" /></p>
+  {{else}}
+    <p><em>Nothing!</em></p>
+  {{/if}}
+</template>
+
+<template name="simpleSecureCode">
+  {{#if codeSamples}}
+    <h3>Code</h1>
+
+    {{#each codeSamples}}
+      <p><strong>{{label}}</strong></p>
+      <pre class="sh_javascript">{{code}}</pre>
+    {{/each}}
+  {{/if}}
+</template>
